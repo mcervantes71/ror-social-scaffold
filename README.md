@@ -9,8 +9,7 @@
 
 ## Live Demo
 
-TBA
-
+[Live demo](https://ror-social-media-project.herokuapp.com/)
 
 ## Getting Started
 
@@ -36,8 +35,6 @@ Setup database with:
    rails db:create
    rails db:migrate
 ```
-
-
 
 ### Usage
 
@@ -82,4 +79,3 @@ TBA
 ## 📝 License
 
 TBA
-
