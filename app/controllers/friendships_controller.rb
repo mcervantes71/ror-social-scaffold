@@ -12,7 +12,7 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = current_user.inverse_friendships.find_by(:user_id => params[:user_id])
+    @friendship = current_user.inverse_friendships.find_by(user_id: params[:user_id])
     @friendship.confirmed = true
 
     if @friendship.save
@@ -23,8 +23,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = current_user.friendships.find_by(:friend_id => params[:user_id])
-    @friendship ||= current_user.inverse_friendships.find_by(:user_id => params[:user_id])
+    @friendship = current_user.friendships.find_by(friend_id: params[:user_id])
+    @friendship ||= current_user.inverse_friendships.find_by(user_id: params[:user_id])
 
     Friendship.destroy(@friendship.id)
 
