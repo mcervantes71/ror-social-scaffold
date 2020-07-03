@@ -30,10 +30,13 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = current_user.friendships.find_by(friend_id: params[:user_id])
-    @friendship ||= current_user.inverse_friendships.find_by(user_id: params[:user_id])
+    @friendship = current_user.inverse_friendships.find_by(user_id: params[:user_id])
+
+    @inverse = current_user.friendships.find_by(friend_id: params[:user_id])
 
     Friendship.destroy(@friendship.id)
+
+    Friendship.destroy(@inverse.id)
 
     redirect_to users_path, notice: 'Friend Deleted.'
   end
