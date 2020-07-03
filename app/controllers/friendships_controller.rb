@@ -1,10 +1,14 @@
 class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.friendships.build(friend_id: params[:user_id])
-    @friendship.user_id = current_user.id
     @friendship.confirmed = false
 
-    if @friendship.save
+    @inverse = Friendship.new
+    @inverse.user_id = params[:user_id]
+    @inverse.friend_id = current_user.id
+    @inverse.confirmed = false
+
+    if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request successfully.'
     else
       redirect_to users_path, alert: @friendship.errors.full_messages.join('. ').to_s
