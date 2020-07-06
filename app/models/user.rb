@@ -22,9 +22,7 @@ class User < ApplicationRecord
 
   # Users who have yet to confirme friend requests
   def pending_friend(user)
-    inverse_friendships.map do |friendship|
-      friendship.user.id if friendship.user_id == user.id && !friendship.confirmed
-    end .compact
+    inverse_friendships.map { |friendship|  friendship.user.id if friendship.user_id == user.id && !friendship.confirmed } .compact
   end
 
   def pending_friends
@@ -33,9 +31,7 @@ class User < ApplicationRecord
 
   # Users who have requested to be friends
   def friend_request(user)
-    friendships.map do |friendship|
-      friendship.friend.id if friendship.friend_id == user.id && !friendship.confirmed
-    end .compact
+    friendships.map { |friendship| friendship.friend.id if friendship.friend_id == user.id && !friendship.confirmed } .compact
   end
 
   def friend_requests
