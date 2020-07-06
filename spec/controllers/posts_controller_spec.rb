@@ -11,10 +11,11 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Article. As you add validations to Article, be sure to adjust the attributes here as well.
+  # Post. As you add validations to post, be sure to adjust the attributes here as well.
   let(:valid_attributes) {
     { :user_id => 1, :content => "This is a test description"}
   }
+  login_user
 
   let(:valid_session) { {} }
 

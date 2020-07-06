@@ -24,6 +24,22 @@ require 'rspec/rails'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
+
+require 'devise'
+# require_relative 'support/controller_macros'
+require_relative  '../spec/controllers/support/controller_macros'
+# ...
+
+RSpec.configure do |config|
+
+  # ...
+
+  # Add these
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include FactoryBot::Syntax::Methods
+  config.extend ControllerMacros, :type => :controller
+end
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
