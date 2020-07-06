@@ -6,7 +6,7 @@ class FriendshipsController < ApplicationController
     @inverse = Friendship.new
     @inverse.user_id = params[:user_id]
     @inverse.friend_id = current_user.id
-    @inverse.confirmed = false
+    @inverse.confirmed = true
 
     if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request successfully.'
