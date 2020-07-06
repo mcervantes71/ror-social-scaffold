@@ -1,3 +1,4 @@
+<h1>All Users</h1>
 <section class='users-section'>
   <ul class='users-list'>
     <% @users.each do |user| %>
@@ -6,7 +7,7 @@
         <span class='profile-link'>
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>
-        <span><%= render 'friendship_status', user: user %></span>
+        <span><%= render 'shared/friendship_status', user: user %></span>
       </li>
     <% end %>
   </ul>
