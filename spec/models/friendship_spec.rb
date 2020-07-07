@@ -30,7 +30,6 @@ RSpec.describe Friendship, type: :model do
   end
 
   describe 'validations' do
-
     it 'is has a valid user_id' do
       should allow_value(valid_friendship.user_id).for(:user_id)
     end

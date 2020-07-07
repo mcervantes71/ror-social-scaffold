@@ -38,16 +38,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40767e05-1b3d-4257-9835-3162df61e1fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ror-social-scaffold.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ror-social-scaffold.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/comment_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/models/friendship_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/friendship_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/friendships_controller_request_spec.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,7 +395,7 @@
       <workItem from="1593805039927" duration="1879000" />
       <workItem from="1593865188769" duration="16033000" />
       <workItem from="1594043280964" duration="380000" />
-      <workItem from="1594107447800" duration="10380000" />
+      <workItem from="1594107447800" duration="11274000" />
     </task>
     <servers />
   </component>
