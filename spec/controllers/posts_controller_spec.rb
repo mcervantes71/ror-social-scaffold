@@ -9,18 +9,17 @@ require 'rails_helper'
 #
 # Change this ArticlesController to your project
 RSpec.describe PostsController, type: :controller do
-
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to post, be sure to adjust the attributes here as well.
-  let(:valid_attributes) {
-    { :user_id => 1, :content => "This is a test description"}
-  }
+  let(:valid_attributes) do
+    { user_id: 1, content: 'This is a test description' }
+  end
   login_user
 
   let(:valid_session) { {} }
 
-  describe "GET #index" do
-    it "returns a success response" do
+  describe 'GET #index' do
+    it 'returns a success response' do
       Post.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_successful # be_successful expects a HTTP Status code of 200

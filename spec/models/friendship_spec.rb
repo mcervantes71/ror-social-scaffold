@@ -5,7 +5,7 @@ RSpec.describe Friendship, type: :model do
   let(:rejected_friendship) { FactoryBot.build(:friendship, :rejected) }
   let(:pending_friendship) { FactoryBot.build(:friendship, :pending) }
 
-  describe "associations" do
+  describe 'associations' do
     it 'belongs to User' do
       should belong_to(:user)
     end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:invalid_comment) {FactoryBot.build(:comment, :invalid_comment)}
+  let(:invalid_comment) { FactoryBot.build(:comment, :invalid_comment) }
 
   describe 'validations for comment model' do
     it 'is not valid if the comment exceeds limit ' do
@@ -22,4 +22,4 @@ RSpec.describe Comment, type: :model do
       should belong_to(:post)
     end
   end
-  end
+end

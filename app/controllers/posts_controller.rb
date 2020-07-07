@@ -22,8 +22,8 @@ class PostsController < ApplicationController
   def timeline_posts
     users = current_user.friends + current_user.inverse_friends
     friends_posts = current_user.posts
-    users.each { | user | friends_posts += user.posts }
-    @timeline_posts = friends_posts.sort_by { |post| post.created_at } .reverse
+    users.each { |user| friends_posts += user.posts }
+    @timeline_posts = friends_posts.sort_by { :created_at } .reverse
   end
 
   def post_params
