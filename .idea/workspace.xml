@@ -8,11 +8,6 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:milestone_6" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -43,7 +38,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40767e05-1b3d-4257-9835-3162df61e1fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ror-social-scaffold.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ror-social-scaffold.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/comment_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/friendship_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/friendship_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/friendships_controller_request_spec.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Rails.Development: ror-social-scaffold">
+  <component name="RunManager" selected="Ruby.friendship_spec">
     <configuration name="All specs in friendship_controller_spec.rd: ror-social-scaffold" type="RSpecRunConfigurationType" factoryName="RSpec">
       <module name="ror-social-scaffold" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -376,9 +380,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Ruby.friendship_spec" />
+        <item itemvalue="RSpec.Comment" />
         <item itemvalue="RSpec.FriendshipsControllers" />
         <item itemvalue="RSpec.Comment GET #index" />
-        <item itemvalue="RSpec.Comment" />
         <item itemvalue="RSpec.Comment populates comment t..." />
       </list>
     </recent_temporary>
@@ -398,6 +402,7 @@
       <workItem from="1593805039927" duration="1879000" />
       <workItem from="1593865188769" duration="16033000" />
       <workItem from="1594043280964" duration="380000" />
+      <workItem from="1594107447800" duration="10380000" />
     </task>
     <servers />
   </component>
@@ -433,46 +438,46 @@
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state x="641" y="260" key="#post/0.23.1920.1127@0.23.1920.1127" timestamp="1593899075390" />
-    <state width="917" height="379" key="GridCell.Tab.0.bottom" timestamp="1593908729625">
+    <state width="917" height="335" key="GridCell.Tab.0.bottom" timestamp="1594118823914">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488837" />
-    <state width="917" height="379" key="GridCell.Tab.0.bottom/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729625" />
-    <state width="917" height="379" key="GridCell.Tab.0.center" timestamp="1593908729624">
+    <state width="917" height="335" key="GridCell.Tab.0.bottom/0.23.1920.1127@0.23.1920.1127" timestamp="1594118823914" />
+    <state width="917" height="335" key="GridCell.Tab.0.center" timestamp="1594118823913">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488835" />
-    <state width="917" height="379" key="GridCell.Tab.0.center/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729624" />
-    <state width="917" height="379" key="GridCell.Tab.0.left" timestamp="1593908729623">
+    <state width="917" height="335" key="GridCell.Tab.0.center/0.23.1920.1127@0.23.1920.1127" timestamp="1594118823913" />
+    <state width="917" height="335" key="GridCell.Tab.0.left" timestamp="1594118823913">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488834" />
-    <state width="917" height="379" key="GridCell.Tab.0.left/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729623" />
-    <state width="917" height="379" key="GridCell.Tab.0.right" timestamp="1593908729624">
+    <state width="917" height="335" key="GridCell.Tab.0.left/0.23.1920.1127@0.23.1920.1127" timestamp="1594118823913" />
+    <state width="917" height="335" key="GridCell.Tab.0.right" timestamp="1594118823914">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488836" />
-    <state width="917" height="379" key="GridCell.Tab.0.right/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729624" />
-    <state width="917" height="379" key="GridCell.Tab.1.bottom" timestamp="1593908729627">
+    <state width="917" height="335" key="GridCell.Tab.0.right/0.23.1920.1127@0.23.1920.1127" timestamp="1594118823914" />
+    <state width="917" height="335" key="GridCell.Tab.1.bottom" timestamp="1594093925324">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488841" />
-    <state width="917" height="379" key="GridCell.Tab.1.bottom/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729627" />
-    <state width="917" height="379" key="GridCell.Tab.1.center" timestamp="1593908729626">
+    <state width="917" height="335" key="GridCell.Tab.1.bottom/0.23.1920.1127@0.23.1920.1127" timestamp="1594093925324" />
+    <state width="917" height="335" key="GridCell.Tab.1.center" timestamp="1594093925323">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488839" />
-    <state width="917" height="379" key="GridCell.Tab.1.center/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729626" />
-    <state width="917" height="379" key="GridCell.Tab.1.left" timestamp="1593908729625">
+    <state width="917" height="335" key="GridCell.Tab.1.center/0.23.1920.1127@0.23.1920.1127" timestamp="1594093925323" />
+    <state width="917" height="335" key="GridCell.Tab.1.left" timestamp="1594093925322">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488838" />
-    <state width="917" height="379" key="GridCell.Tab.1.left/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729625" />
-    <state width="917" height="379" key="GridCell.Tab.1.right" timestamp="1593908729626">
+    <state width="917" height="335" key="GridCell.Tab.1.left/0.23.1920.1127@0.23.1920.1127" timestamp="1594093925322" />
+    <state width="917" height="335" key="GridCell.Tab.1.right" timestamp="1594093925323">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
     <state width="1878" height="308" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1593906488840" />
-    <state width="917" height="379" key="GridCell.Tab.1.right/0.23.1920.1127@0.23.1920.1127" timestamp="1593908729626" />
+    <state width="917" height="335" key="GridCell.Tab.1.right/0.23.1920.1127@0.23.1920.1127" timestamp="1594093925323" />
     <state width="917" height="379" key="GridCell.Tab.2.bottom" timestamp="1593908729629">
       <screen x="0" y="23" width="1920" height="1127" />
     </state>
@@ -512,13 +517,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ror_social_scaffold@posts_controller_spec.rcov" NAME="posts_controller_spec Coverage Results" MODIFIED="1593897499000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
-    <SUITE FILE_PATH="coverage/ror_social_scaffold@friendship_spec.rcov" NAME="friendship_spec Coverage Results" MODIFIED="1593908385484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/models" MODULE_NAME="ror-social-scaffold" />
+    <SUITE FILE_PATH="coverage/ror_social_scaffold@friendship_spec.rcov" NAME="friendship_spec Coverage Results" MODIFIED="1594118823876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/models" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@All_specs_in_friendship_controller_spec_rd__ror_social_scaffold.rcov" NAME="All specs in friendship_controller_spec.rd: ror-social-scaffold Coverage Results" MODIFIED="1593897483664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@Post_when_condition_succeeds.rcov" NAME="Post when condition succeeds Coverage Results" MODIFIED="1593898673850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@User.rcov" NAME="User Coverage Results" MODIFIED="1593898727655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@Comment_populates_comment_t___.rcov" NAME="Comment populates comment t... Coverage Results" MODIFIED="1593906154913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@Comment_GET__index.rcov" NAME="Comment GET #index Coverage Results" MODIFIED="1593906488815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
     <SUITE FILE_PATH="coverage/ror_social_scaffold@FriendshipsControllers.rcov" NAME="FriendshipsControllers Coverage Results" MODIFIED="1593908125176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
-    <SUITE FILE_PATH="coverage/ror_social_scaffold@Comment.rcov" NAME="Comment Coverage Results" MODIFIED="1593906446429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
+    <SUITE FILE_PATH="coverage/ror_social_scaffold@Comment.rcov" NAME="Comment Coverage Results" MODIFIED="1594093898762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror-social-scaffold" />
   </component>
 </project>
