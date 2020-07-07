@@ -1,12 +1,12 @@
 class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.friendships.build(friend_id: params[:user_id])
-    @friendship.confirmed = false
+    @friendship.status = "Request"
 
     @inverse = Friendship.new
     @inverse.user_id = params[:user_id]
     @inverse.friend_id = current_user.id
-    @inverse.confirmed = true
+    @inverse.status = "Pending"
 
     if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request successfully.'
@@ -17,10 +17,10 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = current_user.inverse_friendships.find_by(user_id: params[:user_id])
-    @friendship.confirmed = true
+    @friendship.status = "Confirmed"
 
     @inverse = current_user.friendships.find_by(friend_id: params[:user_id])
-    @inverse.confirmed = true
+    @inverse.status = "Confirmed"
 
     if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request Accepted.'
