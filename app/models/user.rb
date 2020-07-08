@@ -13,11 +13,11 @@ class User < ApplicationRecord
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
 
   def friends
-    friendships.map { |friendship| friendship.friend if friendship.status == "Confirmed" } .compact
+    friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' } .compact
   end
 
   def pending_friend(current_user, user)
-    if current_user.friendships.where(status: "Pending").find_by(:friend_id => user.id)
+    if current_user.friendships.where(status: 'Pending').find_by(friend_id: user.id)
       true
     else
       false
@@ -25,7 +25,7 @@ class User < ApplicationRecord
   end
 
   def friend_request(current_user, user)
-    if current_user.friendships.where(status: "Request").find_by(:friend_id => user.id)
+    if current_user.friendships.where(status: 'Request').find_by(friend_id: user.id)
       true
     else
       false
