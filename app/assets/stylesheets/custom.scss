@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #689f38;
+$primary-color-dark: #001aff;
+$success-dark: #689f38;
+$danger-dark: #f91510;
 $primary-color: #8bc34a;
+$primary-color: #689fcc;
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
@@ -85,6 +88,36 @@ a {
   font-size: 14px;
 }
 
+.btn-accept {
+  color: #fff;
+  background-color: $success-dark;
+  border: 1px solid $divider-color;
+  height: 64px;
+  padding: 4px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-cancel {
+  color: #fff;
+  background-color: $danger-dark;
+  border: 1px solid $divider-color;
+  height: 64px;
+  padding: 4px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-add {
+  color: #fff;
+  background-color: $primary-color-dark;
+  border: 1px solid $divider-color;
+  height: 64px;
+  padding: 4px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
 .notice {
   background-color: #d4f6c6;
 }
@@ -131,7 +164,7 @@ a {
   }
 
   .btn-secondary {
-    width: 30%;
+    width: 10rem;
     margin-left: 70%;
   }
 }
