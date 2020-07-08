@@ -77,8 +77,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
+  Shoulda::Matchers.configure do |config1|
+    config1.integrate do |with|
       with.test_framework :rspec
 
       # Keep as many of these lines as are necessary:
