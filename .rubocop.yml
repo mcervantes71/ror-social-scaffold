@@ -1,11 +1,14 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - "db/**/*"
-    - "bin/*" 
+    - "bin/*"
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
     - "README.md"
+    - "Gemfile"
+    - "spec/rails_helper.rb"
     - "node_modules/**/*"
 
   DisplayCopNames: true
@@ -48,3 +51,4 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
