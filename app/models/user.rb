@@ -12,6 +12,9 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
 
+  has_many :confirmed_friendships, -> { where status: 'Confirmed' }, class_name: 'Friendship'
+  has_many :friends, through: :confirmed_friendships
+
   def friends
     friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' } .compact
   end
@@ -33,6 +36,6 @@ class User < ApplicationRecord
   end
 
   def friend?(user)
-    friends.include?(user)
+    confirmed_friendships.any? { |friendship| friendship.friend == user }
   end
 end
