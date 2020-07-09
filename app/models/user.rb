@@ -18,6 +18,9 @@ class User < ApplicationRecord
   has_many :pending_friendships, -> { where status: 'Pending' }, class_name: 'Friendship', foreign_key: 'user_id'
   has_many :pending_friends, through: :pending_friendships, source: :friend
 
+  has_many :inverted_friendships, -> { where status: 'Request' }, class_name: 'Friendship', foreign_key: 'friend_id'
+  has_many :friend_requests, through: :inverted_friendships
+
   def friends
     friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' } .compact
   end
@@ -26,12 +29,8 @@ class User < ApplicationRecord
     pending_friendships.any? { |friendship| friendship.friend == user }
   end
 
-  def friend_request(current_user, user)
-    if current_user.friendships.where(status: 'Request').find_by(friend_id: user.id)
-      true
-    else
-      false
-    end
+  def friend_request(user)
+    friend_requests.any? { |friendship| friendship.friend == user }
   end
 
   def friend?(user)
