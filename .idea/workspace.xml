@@ -38,20 +38,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40767e05-1b3d-4257-9835-3162df61e1fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/posts_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/posts_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/support/controller_macros.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/support/controller_macros.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/support/factory_bot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/support/factory_bot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/comments.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/comments.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/friendship.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/friendship.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/comment_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/friendship_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/friendship_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stickler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.stickler.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,6 +394,7 @@
       <workItem from="1593865188769" duration="16033000" />
       <workItem from="1594043280964" duration="380000" />
       <workItem from="1594107447800" duration="14222000" />
+      <workItem from="1594221566965" duration="1346000" />
     </task>
     <servers />
   </component>
