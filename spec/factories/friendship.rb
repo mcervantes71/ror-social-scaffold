@@ -3,18 +3,19 @@ FactoryBot.define do
     trait :confirmed do
       user_id { 1 }
       friend_id { 2 }
-      confirmed { true }
+      status { 'Confirmed' }
     end
 
-    trait :rejected do
+    trait :requested do
       user_id { 1 }
       friend_id { 2 }
-      confirmed { false }
+      status { 'Requested' }
     end
 
     trait :pending do
       user_id { 1 }
       friend_id { 2 }
+      status { 'Pending' }
     end
   end
 end
