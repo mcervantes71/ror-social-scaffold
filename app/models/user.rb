@@ -18,23 +18,19 @@ class User < ApplicationRecord
   has_many :pending_friendships, -> { where status: 'Pending' }, class_name: 'Friendship', foreign_key: 'user_id'
   has_many :pending_friends, through: :pending_friendships, source: :friend
 
-  has_many :inverted_friendships, -> { where status: 'Request' }, class_name: 'Friendship', foreign_key: 'friend_id'
-  has_many :friend_requests, through: :inverted_friendships
+  has_many :request_friendships, -> { where status: 'Request' }, class_name: 'Friendship', foreign_key: 'user_id'
+  has_many :friend_requests, through: :request_friendships
 
   def friends
     friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' }.compact
   end
 
-  def pending_friend(user)
+  def pending_friend?(user)
     pending_friendships.any? { |friendship| friendship.friend == user }
   end
 
-  def friend_request(user)
-    friend_requests.any? { |friendship| friendship.friend == user }
-  end
-
-  def inverse_friends
-    inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }.compact
+  def friend_request?(user)
+    request_friendships.any? { |friendship| friendship.friend == user }
   end
 
   def friend?(user)
