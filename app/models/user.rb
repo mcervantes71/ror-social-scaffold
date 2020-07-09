@@ -22,7 +22,7 @@ class User < ApplicationRecord
   has_many :friend_requests, through: :inverted_friendships
 
   def friends
-    friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' } .compact
+    friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' }.compact
   end
 
   def pending_friend(user)
