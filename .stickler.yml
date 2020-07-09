@@ -14,6 +14,7 @@ files:
     - "Guardfile"
     - "Rakefile"
     - "README.md"
+    - "spec/rails_helper.rb"
     - "node_modules/**/*"
 
 # PLEASE DO NOT enable auto fixing options
