@@ -1,10 +1,14 @@
 class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.friendships.build(friend_id: params[:user_id])
-    @friendship.user_id = current_user.id
-    @friendship.confirmed = false
+    @friendship.status = 'Request'
 
-    if @friendship.save
+    @inverse = Friendship.new
+    @inverse.user_id = params[:user_id]
+    @inverse.friend_id = current_user.id
+    @inverse.status = 'Pending'
+
+    if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request successfully.'
     else
       redirect_to users_path, alert: @friendship.errors.full_messages.join('. ').to_s
@@ -13,9 +17,12 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = current_user.inverse_friendships.find_by(user_id: params[:user_id])
-    @friendship.confirmed = true
+    @friendship.status = 'Confirmed'
 
-    if @friendship.save
+    @inverse = current_user.friendships.find_by(friend_id: params[:user_id])
+    @inverse.status = 'Confirmed'
+
+    if @friendship.save && @inverse.save
       redirect_to users_path, notice: 'Friend request Accepted.'
     else
       redirect_to users_path, alert: @friendship.errors.full_messages.join('. ').to_s
@@ -23,10 +30,13 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = current_user.friendships.find_by(friend_id: params[:user_id])
-    @friendship ||= current_user.inverse_friendships.find_by(user_id: params[:user_id])
+    @friendship = current_user.inverse_friendships.find_by(user_id: params[:user_id])
+
+    @inverse = current_user.friendships.find_by(friend_id: params[:user_id])
 
     Friendship.destroy(@friendship.id)
+
+    Friendship.destroy(@inverse.id)
 
     redirect_to users_path, notice: 'Friend Deleted.'
   end

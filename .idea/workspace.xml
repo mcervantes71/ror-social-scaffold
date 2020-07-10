@@ -38,7 +38,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40767e05-1b3d-4257-9835-3162df61e1fa" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/friendship.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/friendship.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/friendship_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/friendship_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.stickler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.stickler.yml" afterDir="false" />
+>>>>>>> ae716b2a51d60b1510131942ad1f50e497e0f2d7
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +401,11 @@
       <workItem from="1593865188769" duration="16033000" />
       <workItem from="1594043280964" duration="380000" />
       <workItem from="1594107447800" duration="14222000" />
+<<<<<<< HEAD
+      <workItem from="1594253559476" duration="2932000" />
+=======
       <workItem from="1594221566965" duration="1346000" />
+>>>>>>> ae716b2a51d60b1510131942ad1f50e497e0f2d7
     </task>
     <servers />
   </component>

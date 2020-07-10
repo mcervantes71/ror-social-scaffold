@@ -12,41 +12,28 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
 
+  has_many :confirmed_friendships, -> { where status: 'Confirmed' }, class_name: 'Friendship'
+  has_many :friends, through: :confirmed_friendships
+
+  has_many :pending_friendships, -> { where status: 'Pending' }, class_name: 'Friendship', foreign_key: 'user_id'
+  has_many :pending_friends, through: :pending_friendships, source: :friend
+
+  has_many :request_friendships, -> { where status: 'Request' }, class_name: 'Friendship', foreign_key: 'user_id'
+  has_many :friend_requests, through: :request_friendships
+
   def friends
-    friendships.map { |friendship| friendship.friend if friendship.confirmed }.compact
+    friendships.map { |friendship| friendship.friend if friendship.status == 'Confirmed' }.compact
   end
 
-  def inverse_friends
-    inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }.compact
+  def pending_friend?(user)
+    pending_friendships.any? { |friendship| friendship.friend == user }
   end
 
-  # Users who have yet to confirme friend requests
-  def pending_friend(user)
-    inverse_friendships.map do |friendship|
-      friendship.user.id if friendship.user_id == user.id && !friendship.confirmed
-    end.compact
-  end
-
-  def pending_friends
-    friendships.map { |friendship| friendship.friend unless friendship.confirmed }.compact
-  end
-
-  # Users who have requested to be friends
-  def friend_request(user)
-    friendships.map do |friendship|
-      friendship.friend.id if friendship.friend_id == user.id && !friendship.confirmed
-    end.compact
-  end
-
-  def friend_requests
-    inverse_friendships.map { |friendship| friendship.user unless friendship.confirmed }.compact
+  def friend_request?(user)
+    request_friendships.any? { |friendship| friendship.friend == user }
   end
 
   def friend?(user)
-    friends.include?(user)
-  end
-
-  def inverse_friend?(user)
-    inverse_friends.include?(user)
+    confirmed_friendships.any? { |friendship| friendship.friend == user }
   end
 end

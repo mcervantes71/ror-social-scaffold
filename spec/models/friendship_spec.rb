@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Friendship, type: :model do
   let(:valid_friendship) { FactoryBot.build(:friendship, :confirmed) }
-  let(:rejected_friendship) { FactoryBot.build(:friendship, :rejected) }
+  let(:requested_friendship) { FactoryBot.build(:friendship, :requested) }
   let(:pending_friendship) { FactoryBot.build(:friendship, :pending) }
 
   describe 'associations' do
@@ -16,16 +16,16 @@ RSpec.describe Friendship, type: :model do
   end
 
   describe 'testing methods' do
-    it 'should return confirmed if friendship confirmed is true' do
-      should allow_value(valid_friendship.confirmed).for(:confirmed)
+    it 'should return confirmed if friendship is confirmed' do
+      should allow_value(valid_friendship.status).for(:status)
     end
 
-    it 'should return pending if friendship confirmed is nil' do
-      should allow_value(pending_friendship.confirmed).for(:confirmed)
+    it 'should return pending if friendship confirmed is pending' do
+      should allow_value(pending_friendship.status).for(:status)
     end
 
-    it 'should return rejected if friendship confirmed is false' do
-      should allow_value(rejected_friendship.confirmed).for(:confirmed)
+    it 'should return requested if friendship is requested' do
+      should allow_value(requested_friendship.status).for(:status)
     end
   end
 
