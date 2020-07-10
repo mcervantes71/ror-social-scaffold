@@ -1,6 +1,6 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
 ![screenshot](./app/assets/images/Screenshot.png)
 
@@ -28,7 +28,7 @@ Postgres: >=9.5
 Install gems with:
 
 ```
-bundle install
+   bundle install
 ```
 
 Setup database with:
@@ -41,28 +41,28 @@ Setup database with:
 To install RSpec open terminal and enter the following
 
 ```
-gem install rspec
+   gem install rspec
 ```
 
 To check the version of RSpec that was installed
 
 ```
-rspec --version
+   rspec --version
 ```
 
 Take a minute and look through the various options available in rspec
 
 ```
-rspec --help
+   rspec --help
 ```
 
 In your terminal enter:
 
 ```
-cd ~
-git clone https://github.com/mcervantes71/Members_Only/tree/develop
-cd Members_Only/
-rails s
+   cd ~
+   git clone https://github.com/mcervantes71/ror-social-scaffold.git
+   cd ror-social-scaffold/
+   rails server
 ```
 
 if presented with and `Error` message similar to this:
@@ -77,7 +77,7 @@ Run:
 Start server with:
 
 ```
-    rails server
+   rails server
 ```
 
 Open `http://localhost:3000/` in your browser.
@@ -85,7 +85,7 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-    rpsec --format documentation
+   rpsec --format documentation
 ```
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
